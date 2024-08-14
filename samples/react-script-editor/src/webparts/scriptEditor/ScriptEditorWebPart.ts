@@ -6,7 +6,6 @@ import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { IPropertyPaneConfiguration, IPropertyPaneField, PropertyPaneTextField, PropertyPaneToggle } from "@microsoft/sp-property-pane";
 import { IScriptEditorProps } from './components/IScriptEditorProps';
 import { IScriptEditorWebPartProps } from './IScriptEditorWebPartProps';
-import PropertyPaneLogo from './PropertyPaneLogo';
 
 export default class ScriptEditorWebPart extends BaseClientSideWebPart<IScriptEditorWebPartProps> {
     public _propertyPaneHelper;
@@ -146,7 +145,6 @@ export default class ScriptEditorWebPart extends BaseClientSideWebPart<IScriptEd
             });
             webPartOptions.push(config);
         }
-        webPartOptions.push(new PropertyPaneLogo());
 
         return {
             pages: [
